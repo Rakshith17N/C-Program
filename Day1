@@ -1,0 +1,96 @@
+// Hello world program
+#include <stdio.h>  // Header file which include all the i/o functin details.
+int main()  // Strating point of the program 
+{
+  printf("Hello World");  // Print Hello World 
+  return 0;
+}
+
+// printing a sentence.
+#include <stdio.h>
+int main()
+{
+  printf("write the sentence");
+  return 0;
+}
+
+// Program to print block 'F' using hash(#) character. 
+#include <stdio.h>
+int main()
+{
+  printf("#####\n");
+  printf("#\n");
+  printf("#\n");
+  printf("#####\n");
+  printf("#\n");
+  printf("#\n");
+  return 0;
+}
+
+// Program to print block 'C' using hash(#) character.
+#include <stdio.h> 
+int main() 
+{
+ printf("    ######\n");
+ printf("  ##      ##\n");
+ printf(" #\n");
+ printf(" #\n");
+ printf(" #\n");
+ printf(" #\n");
+ printf(" #\n");
+ printf("  ##      ##\n");
+ printf("    ######\n");
+ return(0);
+}
+
+// Program to read a number and print the same.
+#include <stdio.h>
+int main() {   
+int n;
+printf("Enter an integer: ");  
+scanf("%d", &n);
+printf("%d", n);
+return 0;
+}
+
+// Program to find the square root of a number.
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+int n;
+printf("Enter an integer: ");
+scanf("%d", &n);
+printf("%d", sqrt(n));
+return 0;
+}
+
+// Program to initialize an integer and print it.
+#include <stdio.h>
+int main()
+{
+int n = 17;
+printf("%d", n);
+return 0;
+}
+
+// Program to print the following characters in a reverse way: 'X', 'M', 'L'
+#include <stdio.h> 
+int main() 
+{
+char P = 'X';
+char Q = 'M';
+char R = 'L';
+printf("The reverse of %c%c%c is %c%c%c", P, Q, R, R, Q, P);
+return(0);
+}
+
+[or]
+
+#include <stdio.h> 
+int main() 
+{
+char a[3] = {'X', 'M', 'L'};
+printf("The reverse of %c%c%c is", a[2], a[1], a[0]);
+return(0);
+}
