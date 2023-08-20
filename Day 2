@@ -1,0 +1,209 @@
+// Program to define a macro and print the same.
+#include <stdio.h>
+#define pi 3.14
+int main()
+{
+  float result, a=17;
+  result=2*pi*a;
+  printf("%f",result);
+  return 0;
+}
+
+// Program to print "hi" if macro a is defined ,"bye" if  not defined.
+#include <stdio.h>
+#define a 17
+int main()
+{
+  #ifdef a
+  printf("hi\n");
+  #else
+  printf("bye\n");
+  #endif
+  return 0;
+}
+
+// Program to accepts an employee's id & worked hours and print the employee id and salary of particular month.
+#include <stdio.h>
+#define salaryamt/hr 15000
+int main()
+{
+  float hrs, salary;
+  char employeeid[10];
+  printf("enter employeeid:%c\n");
+  scanf("%10s",&employeeid);
+  printf("worked hours:%f\n");
+  scanf("%f",&hrs);
+  salary=salaryamt/hr * hrs;
+  printf("id:%s",employeeid);
+  printf("salary:%.2f",salary);
+  return 0;
+}
+
+// Program to initialize an integer, floating type no., character, long integer and unsigned long integer and print them.
+#include <stdio.h>
+int main()
+{
+  int a=17;
+  float r=17.08;
+  char mychar='a';
+  long l=171001080406;
+  unsigned long u=604080100171;
+  printf("%d %f %c %ld %lu", a,r,mychar,l,u);
+  return 0;
+}
+
+// Program to print the size of the variable declared.
+#include <stdio.h>
+int main()
+{
+  int a1;
+  float a2;
+  char a3;
+  long a4;
+  double a5;
+  unsigned long a6;
+  printf("%d %d %d %d %d %d %d", sizeof(n1), sizeof(n2), sizeof(n3), sizeof(n4), sizeof(n5), sizeof(n6));
+  return 0;
+}
+
+// Program to read an integer, floating type no., character, long integer and unsigned long integer and print them.
+#include <stdio.h>
+int main()
+{
+  int a;
+  float r;
+  char mychar;
+  long l;
+  unsigned long u;
+  printf("enter a:\n");
+  printf("enter r:\n");
+  printf("enter mychar: %c\n");
+  printf("enter l: %l\n");
+  printf("enter u: %lu\n");
+  scanf("%d", &a);
+  scanf("%f", &r);
+  scanf("%c", &mychar);
+  scanf("%ld", &l);
+  scanf("%lu", &u);
+  printf("%d %f %c %ld %lu", a, r, mychar, l, u);
+  return 0;
+}
+
+// Program to initialize integer with value greater than its size & observe the output/error.
+#include <stdio.h>
+int main()
+{
+int a=5294967296;
+printf("%d",a);
+return 0;
+}
+
+// Program to round-off the floating point variable with 6 decimal places.
+#include <stdio.h>
+int main()
+{
+  float  a=1.7081437;
+  printf("%0.1f\n",a);
+  printf("%0.2f\n",a);
+  printf("%0.3f\n",a);
+  printf("%0.4f\n",a);
+  printf("%0.5f\n",a);
+  printf("%f\n",a);
+  return 0;
+}
+
+// Program to read a character and print its ASCII value.
+#include <stdio.h>
+int main()
+{
+  char a; 
+  printf("Enter a character:");
+  scanf("%c",&a); 
+  printf("The ASCII value of the ch variable is: %d", a);
+  return 0;
+}
+
+// Program to declare a variable of type unsigned integer and input a negative value. Print using various format specifiers.
+#include <stdio.h>
+int main()
+{
+  unsigned int a = -1708;
+  printf("%d\n", a);
+  printf("%i\n", a);
+  printf("%f\n", a);
+  printf("%c\n", a);
+  printf("%ld\n", a);
+  printf("%lf\n", a);
+return 0;
+}
+
+// Program to return the absolute value of a long integer. Test with positive and negative values
+#include<stdio.h>
+#include<stdlib.h>
+int main ()
+{
+  long int a,r;
+  printf("Input 1st number (positive or negative):\n");
+  scanf("%ld",&a);
+  printf("Input 2nd number (positive or negative):\n");
+  scanf("%ld",&r);
+  printf (" The absolute value of 1st number is: %ld\n",labs(a));
+  printf (" The absolute value of 2nd number is: %ld\n",labs(r));
+  return 0;
+}
+
+// Program using printf() demonstrating the fields of lengths, width and precision.
+#include<stdio.h> 
+int main() 
+ { 
+   float a; 
+   a=17.08; 
+   printf("the original number %f\n",a); 
+   printf("width adjusted to 6 places %6f\n",a); 
+   printf("precision adjusted to .4 and width adjusted to 6 places %6.4f\n",a); 
+   return 0; 
+ }
+
+// Assig a
+#include<stdio.h>
+int main()
+{
+  char ar='-5';
+  printf("%c", ar);  // output obtained is 5
+  return 0;
+}
+
+// Assign b
+#include<stdio.h>
+int main()
+{
+  unsigned char ar='-5';
+  printf("%c", ar);  // output obtained is 5
+  return 0;
+}
+
+// Assign c
+#include<stdio.h>
+int main()
+{
+  int a;
+  printf("Enter a no.\n");
+  scanf("%d", &a);
+  printf("no. entered is %d\n", a);
+  printf("hexadecimal of the no. is %x\n", a);
+  return 0;
+}
+
+//Assign d
+#include<stdio.h>
+int main()
+{
+  int a;
+  printf("Enter value to read using percentage i\n");
+  scanf("%i", &a);
+  printf("no. entered is %i\n", a);
+  printf("no. entered is %d\n", a);
+  return 0;
+}
+  
+
