@@ -1,0 +1,70 @@
+// Use enum datatype to store days of the week.
+#include<stdio.h>
+int main()
+{
+  enum week_day {SUN, MON, TUE, WED, THU, FRI, SAT};
+  enum week_day day;
+  printf("%d %d %d %d %d %d %d",SUN, MON, TUE, WED, THU, FRI, SAT);
+  return 0;
+}
+
+// WAP and declare 4 variable of bool types. 
+#include<stdio.h>
+#include<stdbool.h>
+int main()
+{
+  bool a1 = true;
+  bool a2 = false;
+  bool a3 = 0;
+  bool a4 = 17;
+  printf("%d %d %d %d", a1, a2, a3, a4);
+  return 0;
+}
+
+// Program to printing a variable and observe the output.
+#include<stdio.h>
+int main()
+{
+  int a = 1708;
+  printf("%d",a);
+  return 0;
+}
+
+// WAP tp print the ASCII value of any key pressed.
+#include<stdio.h>
+int main()
+{
+  char ar;
+  printf("enter any key\n");
+  scanf("%c",&ar);
+  printf("%d",ar);
+  return 0;
+}
+
+// WAP to define a const integer abd print the value.
+#include<stdio.h>
+int main()
+{
+  const int a=8;
+  printf("%d",a);
+  return 0;
+}
+
+// WAP try to change the const int value.
+#include<stdio.h>
+int main()
+{
+  const int a=5;
+  a=6;   // Does not overwrite
+  printf("%d",a);   // Displays error
+  return 0;
+}
+
+//WAP to initialize a varibale name as any keyword.
+#include<stdio.h>
+int main()
+{
+  int else = 5;
+  printf("%d", else);
+  return 0;
+}
