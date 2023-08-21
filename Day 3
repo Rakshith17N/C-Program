@@ -68,3 +68,52 @@ int main()
   printf("%d", else);
   return 0;
 }
+
+// Assign e
+#include<stdio.h>
+int main()
+{
+  int ar;
+  printf("enter the ASCII value\n");
+  scanf("%d",&ar);
+  printf("%c",ar);
+  return 0;
+}
+
+// Assign f
+#include<stdio.h>
+int main()
+{
+  float a=17.17102001080420061437;
+  float r=28.28213112191531172548;
+  float res;
+  result=a+b;
+  printf("%0.19f",result);
+  return 0;
+}
+
+// Assign g
+#include<stdio.h>
+int main()
+{
+  char character,up_case;
+  printf("enter character:\n");
+  scanf("%c",&character);
+  up_case=toupper(character);
+  printf("%c",up_case);
+  return 0;
+}
+
+// Assign h
+#include<stdio.h>
+int main()
+{
+  int a1;
+  float a2;
+  char a3;
+  long a4;
+  double a5;
+  unsigned long a6;
+  printf("%d %d %d %d %d %d", sizeof(a1), sizeof(a2), sizeof(a3), sizeof(a4), sizeof(a5), sizeof(a6));
+  return 0;
+}
