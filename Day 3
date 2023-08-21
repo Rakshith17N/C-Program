@@ -60,7 +60,7 @@ int main()
   return 0;
 }
 
-//WAP to initialize a varibale name as any keyword.
+//WAP to initialize a variable name as any keyword.
 #include<stdio.h>
 int main()
 {
