@@ -21,7 +21,7 @@ int main()
   return 0;
 }
 
-// Floating point number to nearest integer
+// Floating point number to nearest integer.
 #include<stdio.h>
 int main()
 {
