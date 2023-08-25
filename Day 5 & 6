@@ -1,0 +1,478 @@
+// Chech no. equal or not.
+#include<stdio.h> 
+int main() 
+{ 
+  int a,A; 
+  printf("enter numers:\n"); 
+  scanf("%d %d",&a,&A); 
+  if(a==A) 
+  printf("equal"); 
+  else 
+  printf("not equal"); 
+  return 0; 
+} 
+
+// Day of the week of a calender.
+#include<stdio.h>
+int main ()
+{
+    int date, days, mon, total;
+    printf("date and month");
+    scanf("%d %d", &date, &mon);
+    if (mon==1)
+    days=31;
+    if (mon==2)
+    days=59;
+    if (mon==3)
+    days=90;
+    if (mon==4)
+    days=120;
+    if (mon==5)
+    days=151;
+    if (mon==6)
+    days=181;
+    if (mon==7)
+    days=212;
+    if (mon==8)
+    days=243;
+    if (mon==9)
+    days=273;
+    if (mon==10)
+    days=304;
+    if (mon==11)
+    days=334;
+    if (mon==12)
+    days=365;
+
+    total = days;
+
+    if(mon==1||mon==3||mon==5||mon==7||mon==8||mon==10||mon==12)
+        total = total-31+date;
+    else if(mon==4||mon==6||mon==9||mon==11)
+        total = total-30+date;
+    else
+        total = total-28+date;
+
+    switch(total%7)
+    {
+        case 0:
+    printf("sat");
+    break;
+        case 1:
+    printf("sun");
+    break;
+
+        case 2:
+    printf("mon");
+    break;
+
+        case 3:
+    printf("tue");
+    break;
+
+        case 4:
+    printf("wed");
+    break;
+
+        case 5:
+    printf("thur");
+    break;
+    
+        case 6:
+    printf("fri");
+    break;
+    }
+}
+
+// Positive ,negative & zero 
+#include<stdio.h> 
+int main() 
+{ 
+  int a; 
+  printf("enter number:\n"); 
+  scanf("%d",&a); 
+  if(a<0) 
+  printf("%d is positive",a); 
+  else if (a>0) 
+  printf("%d is negative",a); 
+  else 
+  printf("%d is zero",a); 
+  return 0; 
+} 
+  
+// To check chararacter is vowel or not.
+#include<stdio.h> 
+int main() 
+{ 
+  int ch; 
+  printf("enter character:\n"); 
+  scanf("%c",&ch); 
+  if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U') 
+  printf("%c is vowel",ch); 
+  else 
+  printf("%c is not vowel",ch); 
+  return 0; 
+} 
+  
+// Leap year or not 
+#include<stdio.h> 
+int main() 
+{ 
+  int leap_yr,next_leap; 
+  printf("enter year:\n"); 
+  scanf("%d",&leap_yr); 
+  if((leap_yr%4==0))
+  printf("%d is leap year\n",leap_yr); 
+  else 
+  printf("%d is not leap year\n",leap_yr); 
+  next_leap=leap_yr+4; 
+  printf("next leap year is %d",next_leap); 
+  return 0; 
+} 
+ 
+// Largest of 3 numbers 
+#include<stdio.h> 
+int main() 
+{ 
+  int a,b,c; 
+  printf("enter 3 no.:\n"); 
+  scanf("%d %d %d",&a,&b,&c); 
+  if(a>b && a>c) 
+  printf("Greater is %d",a); 
+  else if (b>a && b>c) 
+  printf("Greater is %d",b); 
+  else 
+  printf("Greater is %d",c); 
+  return 0; 
+} 
+
+// Report card.
+#include<stdio.h>
+int main()
+{
+  int mat,sci,eng,kan,his,total,fail=0,pass;
+  float avg,percent;
+  printf("enter the marks:\n");
+  scanf("%d %d %d %d %d",&mat,&sci,&eng,&kan,&his);
+  avg=(mat+sci+eng+kan+his)/5;
+  total=(mat+sci+eng+kan+his);
+  percent=((float)total/500)*100;
+  printf("total is %d",total);
+  printf("percent is %f",percent);
+  if(percent>90)
+  printf("Distiction\n");
+  else if(percent>60 && percent<90)
+  printf("First class\n");
+  else if (percent>=35 && percent<60)
+  printf("Second class\n");
+  else
+  printf("Fail\n");
+  if(mat<35)
+  fail++;
+  if(sci<35)
+  fail++;
+  if(eng<35)
+  fail++;
+  if(kan<35)
+  fail++;
+  if(his<35)
+  fail++;
+  pass=5-fail;
+  printf("No. pass subject is %d",pass);
+  printf("No. fail subject is %d",fail);
+  return 0;
+}
+
+// Program to find Coordinates. 
+#include<stdio.h> 
+int main() 
+{ 
+  int x,y; 
+  printf("enter x&y coord:\n"); 
+  scanf("%d %d",&x,&y); 
+  if(x>0) 
+  { 
+    if(y>0) 
+    printf("1st"); 
+    else 
+    printf("4th"); 
+  } 
+  else if(x<0) 
+  { 
+    if(y>0) 
+    printf("2nd"); 
+    else 
+    printf("3rd"); 
+  } 
+  else if(x==0 && y==0) 
+  printf("origin"); 
+  else 
+  printf("lies on axis"); 
+  return 0; 
+} 
+  
+// Program to measure temperature intensity. 
+#include<stdio.h> 
+int main() 
+{ 
+  float temp; 
+  printf("enter temp:\n"); 
+  scanf("%f",&temp); 
+  if(temp<0) 
+  printf("Freezing"); 
+  else if(temp>0 && temp<10) 
+  printf("very cold"); 
+  else if(temp>10 && temp<20) 
+  printf("cold"); 
+  else if(temp>20 && temp<30) 
+  printf("Normal"); 
+  else 
+  printf("hot"); 
+  return 0; 
+} 
+  
+// If triangle is equilateral,isosceles or scalene. 
+#include<stdio.h> 
+int main() 
+{ 
+  float a,b,c; 
+  printf("enter sides:\n"); 
+  scanf("%d %d %d",&a,&b,&c); 
+  if(a==b==c) 
+  printf("equilateral"); 
+  else if(a==b || a==c || b==c) 
+  printf("isosceles"); 
+  else 
+  printf("scalene"); 
+  return 0; 
+} 
+
+// Program to check whether a triangle can be formed using given lengths.
+#include<stdio.h>
+int main()
+{
+  int a,b,c;
+  printf("The 3 Triangle is values are: \n");
+  scanf("%d %d %d",&a,&b,&c);
+  if(a+b>c && b+c>a && c+a>b)
+  {
+  printf("Triangle can be formed \n");
+  }
+  else
+  printf("Triangle cannot be formed \n");
+  return 0;
+}
+
+// Program to check the entered character is an Alphabet or number or special character.
+#include<stdio.h>
+int main()
+{
+  char c;
+  printf("Enter a Character: \n");
+  scanf("%c",&c);
+  if((c>=65 && c<=90) || (c>=97 && c<=122))
+  printf("Alphabets\n");
+  else if(c>=48&&c<=57)
+  printf("Digits\n");
+  else
+  printf("Special character\n");
+  return 0;
+}
+
+// Program for electric bill.
+#include <stdio.h>
+int main()
+{
+  unsigned int units, amount_surch_appl=500, fir_slab_max=49, sec_slab_max=149, thi_slab_max=299, fou_slab_min=300, min_bill=120;
+  float slab1_rate=1.5, slab2_rate=2.8, slab3_rate=3.45, slab4_rate=5.7;
+  float bill=0, surcharge_factor=1.12;
+  
+  while(1)
+  {
+  
+  bill=0;
+  
+  printf("Enter the units consumed\n");
+  scanf("%d", &units);
+  
+  if(units<=fir_slab_max)
+  {
+  bill=units*slab1_rate;
+  }
+  else if(units<=sec_slab_max)
+  {
+  bill+=fir_slab_max*slab1_rate;
+  bill+=(units-fir_slab_max)*slab2_rate;
+  }
+  else if(units<=thi_slab_max)
+  {
+  bill+=fir_slab_max*slab1_rate;
+  bill+= (sec_slab_max-fir_slab_max) *slab2_rate;
+  bill+= (units-sec_slab_max)*slab3_rate;
+  }
+  else
+  {
+  
+  bill+=fir_slab_max*slab1_rate;
+  bill+= (sec_slab_max-fir_slab_max) *slab2_rate;
+  bill+= (thi_slab_max-sec_slab_max)*slab3_rate;
+  bill+= (units-thi_slab_max)*slab4_rate;
+  }
+  
+  if(bill<min_bill)
+  {
+  bill=min_bill;
+  }
+  if(bill>amount_surch_appl)
+  {
+  bill*=surcharge_factor;
+  }
+  
+  printf("Bill is %.2f\n", bill);
+  }
+  return 0;
+}
+
+[or]
+
+#include<stdio.h>
+int main()
+{
+  char c[20];
+  int ID, unit;
+  float amt, cpu1, cpu2, cpu3, cpu4;
+  printf("name  id  unit");
+  scanf("%s %d %d", &c, &ID, &unit);
+  if(unit<=199)
+  {
+  cpu1 = 1.2;
+  amt = cpu1* unit;
+  }
+  else if(unit>=200 && unit<400)
+  {
+  cpu2 = 1.5;
+  amt = (1.2*199) + (cpu2*(unit-199));
+  }
+  else if(unit>=400 && unit<600)
+  {
+  cpu3=1.8;
+  amt = (1.2*199) + (1.5*199) + (cpu3*(unit-399));
+  }
+  else
+  {
+  cpu4=2.0;
+  
+  amt = (1.2*199) + (1.5*199) + (1.8*199) + (cpu4*(unit-599));
+  }
+  
+  if(amt>=400)
+  amt = amt + amt*0.15;
+  if(amt<=100)
+  amt = 100;
+  
+  printf("%f", amt);
+  return 0;
+}
+
+// Program to print day of the week.
+#include<stdio.h>
+int main ()
+{
+  enum month {SUN=1,MON,TUE,WED,THUR,FRI,SAT};
+  enum month day;
+  printf("enter day:\n");
+  scanf("%d",&day);
+  switch (day)
+  {
+      case 1: printf("SUN");
+      break;
+      case 2: printf("MON");
+      break;
+      case 3: printf("TUE");
+      break;
+      case 4: printf("WED");
+      break;
+      case 5: printf("THUR");
+      break;
+      case 6: printf("FRI");
+      break;
+      case 7: printf("SAT");
+      break;
+  }
+  return 0;
+}
+
+// Condense specified number of total days into years,weeks & days.
+#include<stdio.h>
+int main ()
+{
+  int a;
+  int yrs,modyrs, weeks, modweeks, days;
+  printf("enter total no. of days:");
+  scanf("%d", &a);
+  modyrs=a%365;
+  yrs=a/365;
+  modweeks=modyrs%7;
+  weeks=modyrs/7;
+  days=modweeks;
+  printf("%d %d %d", yrs, weeks, days);
+  return 0;
+}
+
+// Program to check available mobiles in the range of the of user budget.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+  int a,b;
+  int Vivo=20000, Oppo=30000, Redmi=100000, Nokia=30000, Oneplus=50000, Samsung=40000;
+  printf("enter a and b");
+  scanf("%d %d", &a, &b);
+  if(Vivo>=a && Vivo<=b)
+  printf("Vivo is available\n");
+  if(Oppo>=a && Oppo<=b)
+  printf("Oppo is available\n");
+  if(Redmi>=a && Redmi<=b)
+  printf("Redmi is available\n");
+  if(Nokia>=a && Nokia<=b)
+  printf("Nokia is available\n");
+  if(Oneplus>=a && Oneplus<=b)
+  printf("Oneplus is available\n");
+  if(Samsung>=a && Samsung<=b)
+  printf("Samsung is available");
+  return 0;
+}
+
+// Calculator program.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+  int a,b,c;
+  char ch;
+  
+  printf("enter two numbers and operation\n");
+  scanf("%d %c %d",&a,&ch,&b);
+  switch(ch)
+  {
+    case '+':
+    c=a+b;
+    break;
+    case '-':
+    c=a-b;
+    break;
+    case '*':
+    c=a*b;
+    break;
+    case '/':
+    c=a/b;
+    break;
+  }
+  printf("%d",c);
+  return 0;
+}
+
+
+
+
+
