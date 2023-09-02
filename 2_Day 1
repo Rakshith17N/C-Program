@@ -1,0 +1,303 @@
+// Program to print no. from 1 to 50 using while loop.
+#include<stdio.h>
+int main()
+{
+    int i=1;
+    while(i<=50)
+    {
+        printf("%d\n",i);
+        i++;
+    }
+}
+
+// Program to check the given no. is prime.
+#include<stdio.h>
+int main()
+{
+    int num,i,flag=0;
+    printf("enter number:\n");
+    scanf("%d",&num);
+    for(i=2; i<=num/2; i++)
+    {
+        if(num%i==0)
+            flag=1;
+
+    }
+    if(flag)
+        printf("%d is not prime number\n",num);
+    else
+        printf("%d is prime number\n",num);
+}
+
+// Program to generate n prime no.
+#include<stdio.h>
+int main()
+{
+    int no_of_prime_no;
+
+    printf("enter the total no. of prime no. to be printed:\n");
+    scanf("%d", &no_of_prime_no);
+
+    int count=0;
+    for(int i=2; count<no_of_prime_no; i++)
+    {
+        int flag=1;
+
+        for(int j=2; j<=i/2; j++)
+        {
+            if(i%j==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+
+        if(flag)
+        {
+            printf("%d ",i);
+            count++;
+        }
+
+    }
+    return 0;
+}
+
+// Program to print the star triangles, Floyd's triangle and alphabet triangle.
+#include <stdio.h>  // star triangle
+int main()  
+{  
+    int n;  
+    printf("Enter the number of rows");
+    scanf("%d",&n);  
+    for(int i=1;i<=n;i++)  
+    {  
+        for(int j=1;j<=i;j++)  
+        {  
+            printf("* ");  
+        }  
+        printf("\n");  
+    }  
+    return 0;  
+}
+
+#include <stdio.h>   // Floyd's triangle
+int main()  
+{  
+    int num, i, j, k = 1;   
+   
+    printf( " Enter a number to define the rows in Floyd's triangle: \n");  
+    scanf( " %d", &num);  
+    for (i = 1; i <= num; i++)  
+    {   
+       for (j = 1; j <= i; j++)  
+        {  
+            printf(" %2d", k++); 
+        }  
+        printf( "\n");  
+        }   
+}
+
+#include<stdio.h>  // Alphabet triangle
+int main()
+{
+    int i, j;
+    char number=65;
+    for(i=1;i<=5;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%c", number);
+            ++number;
+        }
+     printf("\n");
+    }
+    return 0;
+}
+
+// Program to perform factorial on a given no.
+#include <stdio.h>
+int main()
+{
+    int n, i;
+    int fact = 1;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+    {
+        fact = fact * i;
+    }
+
+    printf("Factorial of %d", fact);
+
+    return 0;
+}
+
+// Program to generate a Fibonacci series of given size 'n'.
+#include <stdio.h>
+int main()
+{
+    int n1=0, n2=1, n3, size, i;
+    printf("enter the size:\n");
+    scanf("%d", &size);
+    printf("%d\t%d\t", n1, n2);
+    for(i=1; i<=size; i++)
+    {
+        n3=n1+n2;
+        n1=n2;
+        n2=n3;
+        printf("%d\t", n3);
+    }
+
+    return 0;
+}
+
+// Program to find the first five Armstong no.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n, digitCount, number, sum, rem, i=2, count=1;
+    printf("Enter how many Armstrong numbers? \n");
+    scanf("%d", &n);
+    while(count <= n)
+    {
+        number = i;
+        digitCount = 0;
+        while(number != 0)
+        {
+            digitCount++;
+            number = number/10;
+        }
+        number = i;
+        sum = 0;
+        while(number != 0)
+        {
+            rem = number%10;
+            sum = sum + pow(rem, digitCount);
+            number = number/10;
+        }
+        if(sum == i)
+        {
+            printf("%d\t", i);
+            count++;
+        }
+        i++;
+    }
+    return 0;
+}
+
+// Program to sort given 'n' no. in ascending order.
+#include <stdio.h>
+int  main()
+{
+
+    int i, j, a, n, number[30];
+    printf("Enter the value of N \n");
+    scanf("%d", &n);
+
+    printf("Enter the numbers \n");
+    for (i = 0; i < n; ++i)
+        scanf("%d", &number[i]);
+
+    for (i = 0; i < n; ++i)
+    {
+
+        for (j = i + 1; j < n; ++j)
+        {
+
+            if (number[i] > number[j])
+            {
+
+                a =  number[i];
+                number[i] = number[j];
+                number[j] = a;
+
+            }
+
+        }
+
+    }
+
+    printf("The numbers arranged in ascending order are given below \n");
+    for(i=0; i<n; i++)
+        printf("%d\n", number[i]);
+  return 0;
+}
+
+
+// Program to convert decimal no. to binary no. and print no. of o's and 1's.
+#include<stdio.h>
+int main()
+{
+    int deci_no, bin_no, count0=0, count1=0, temp;
+    printf("Enter decimal number:\n");
+    scanf("%d", &deci_no);
+    for(;;)
+    {
+        bin_no = deci_no % 2;
+        if(bin_no == 0)
+            count0++;
+        else
+            count1++;
+        printf("%d", bin_no);   // Read the output from right to left.
+        deci_no = deci_no / 2;
+        if(deci_no == 0)
+            break;
+
+    }
+    printf("\n%d \n%d", count0, count1);
+}
+
+// Program to set, clear and toggle 'n'th bit of an integer.
+#include<stdio.h>
+int main()
+{
+    int deci_no, bin_no, set=1, clr=1, toggle;
+    printf("Enter decimal number:\n");
+    scanf("%d", &deci_no);
+    for(;;)
+    {
+        bin_no = deci_no % 2;
+        printf("%d", bin_no);   // Read the output from right to left.
+        deci_no = deci_no / 2;
+        if(deci_no == 0)
+            break;
+    }
+
+    printf("\n%d\n", bin_no);
+
+
+    if(bin_no==0)
+    {
+        bin_no=1;
+        printf("%d\n",bin_no);
+    }
+    else
+    {
+        bin_no=0;
+        printf("%d\n",bin_no);
+    }
+    if(bin_no==0 || bin_no==1)
+    {
+        bin_no = 1;
+        printf("%d\n",bin_no);
+    }
+    if(bin_no==0 || bin_no==1)
+    {
+        bin_no = 0;
+        printf("%d\n",bin_no);
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
