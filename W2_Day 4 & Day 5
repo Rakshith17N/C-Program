@@ -1,3 +1,5 @@
+
+
 // Program to read a string and copy it to another string using string copy function.
 #include<stdio.h>
 #include<string.h>
@@ -189,8 +191,6 @@ int main()
 
 char dupli_freq(char a[], int size)
 {
-
-
     int count = 0;
 
     char my_char;
@@ -207,7 +207,62 @@ char dupli_freq(char a[], int size)
     printf("%c is repeated %d times\n", my_char, count);
 }
 
+// Program to search for substring.
+#include<stdio.h>
 
+char check_for_substring(char str[]);
+
+int main()
+{
+    int size;
+    printf("enter the size of the string:\n");
+    scanf("%d", &size);
+
+    char my_string[size];
+    printf("enter the string:\n");
+    scanf("%s", my_string);
+    while(1)
+    {
+        check_for_substring(my_string);
+    }
+
+
+    return 0;
+}
+
+char check_for_substring(char str[])
+{
+    char sub_str[10];
+    printf("enter the substring to be checked:\n");
+    scanf("%s", sub_str);
+
+    int flag = 0;
+
+    for(int i = 0; str[i] != '\0'; i++)
+    {
+        flag = 0;
+        for(int j = 0; sub_str[j] != '\0'; j++)
+        {
+            if(str[i+j] != sub_str[j])
+            {
+                flag = 0;
+                break;
+            }
+            flag = 1;
+        }
+
+        if(flag)
+            break;
+    }
+
+    if(flag)
+        printf("Match Found!!\n");
+    else
+        printf("Match not Found!!\n");
+}
+
+
+// 
 
 
 
